@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav{
-  font-size: 11px;
+  font-size: 13px;
+  margin: 0.55rem;
+}
+ 
+#apple{
+  font-size: 1.15rem;
 }
