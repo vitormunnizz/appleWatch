@@ -9,7 +9,7 @@ function App() {
       <header>
         <nav>
           <ul className='flex justify-center gap-10 items-center'>
-            <li className='cursor-pointer'><FaApple className="text-1xl" id='apple'/></li>
+            <li className='cursor-pointer'><FaApple id='apple' /></li>
             <li className='cursor-pointer'>Loja</li>
             <li className='cursor-pointer'>Mac</li>
             <li className='cursor-pointer'>IPad</li>
@@ -26,7 +26,29 @@ function App() {
         </nav>
       </header>
 
-      
+      <main>
+        <div>
+          <h1>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
+          <p>R$ 1.149,00</p>
+          <p> Em até 12x de R$ 95,75</p>
+          <p>R$ 1.034,10 à vista (10% de desconto)</p>
+          <p>Cor - Azul-inverno</p>
+          <div id='imagens'>
+            
+          </div>
+          <p>Cor da caixa do Apple Watch - Preto</p>
+          <h2>Tamanho da caixa</h2>
+          <div >
+              <p>41 mm</p>
+              <p>45 mm</p>
+          </div>
+          <p>Compatível com a maioria das versões de Apple Watch.</p>
+          <p>Saiba mais sobre a compatibilidade de pulseiras</p>
+          <h2>Tamanho da pulseira</h2>
+          <p>Tamanho único (cabe na maioria dos pulsos)</p>
+          <p>Para pulsos de 145 a 220 mm.</p>
+        </div>
+      </main>
     </div>
   )
 }
