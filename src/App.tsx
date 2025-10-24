@@ -55,10 +55,10 @@ function App() {
           <div>
             <img src={img1} alt="aaa" width={200}/>
           </div>
-          <div className='flex'>
-            <img src={img0} alt="aaa" width={100}/>
-            <img src={img1} alt="aaa" width={100}/>
-            <img src={img2} alt="aaa" width={100}/>
+          <div className='flex gap-10'>
+            <img src={img0} alt="aaa" width={100} className='cursor-pointer'/>
+            <img src={img1} alt="aaa" width={100} className='cursor-pointer'/>
+            <img src={img2} alt="aaa" width={100} className='cursor-pointer'/>
           </div>
             
         </div>
