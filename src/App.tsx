@@ -1,6 +1,9 @@
 import './App.css'
 import { FaApple } from "react-icons/fa";
 import { PiMagnifyingGlassBold, PiBagBold } from "react-icons/pi";
+import img0 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-0.jpeg";
+import img1 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-1.jpeg";
+import img2 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-2.jpeg";
 
 function App() {
 
@@ -26,8 +29,8 @@ function App() {
         </nav>
       </header>
 
-      <main>
-        <div>
+      <main className='grid grid-cols-2'>
+        <div id='textos'>
           <h1>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
           <p>R$ 1.149,00</p>
           <p> Em até 12x de R$ 95,75</p>
@@ -47,6 +50,17 @@ function App() {
           <h2>Tamanho da pulseira</h2>
           <p>Tamanho único (cabe na maioria dos pulsos)</p>
           <p>Para pulsos de 145 a 220 mm.</p>
+        </div>
+        <div id='imagens-relogios' className='flex flex-col'>
+          <div>
+            <img src={img1} alt="aaa" width={200}/>
+          </div>
+          <div className='flex'>
+            <img src={img0} alt="aaa" width={100}/>
+            <img src={img1} alt="aaa" width={100}/>
+            <img src={img2} alt="aaa" width={100}/>
+          </div>
+            
         </div>
       </main>
     </div>
