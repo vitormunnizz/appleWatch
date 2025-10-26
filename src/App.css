@@ -1,14 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 
-nav{
-  font-size: 12px;
-  margin: 0.5rem;
-}
- 
-#apple{
-  font-size: 1.15rem;
+body {
+  font-family: "San Francisco";
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 14px;
 }

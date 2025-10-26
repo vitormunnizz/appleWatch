@@ -11,7 +11,7 @@ function App() {
     <div>
       <header>
         <nav>
-          <ul className='flex justify-center gap-10 items-center'>
+          <ul className='flex justify-between gap-10 items-center'>
             <li className='cursor-pointer'><FaApple id='apple' /></li>
             <li className='cursor-pointer'>Loja</li>
             <li className='cursor-pointer'>Mac</li>
@@ -29,9 +29,9 @@ function App() {
         </nav>
       </header>
 
-      <main className='grid grid-cols-2'>
+      <main className='grid grid-cols-2 mt-10'>
         <div id='textos'>
-          <h1>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
+          <h1 className='text-2xl my-5'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
           <p>R$ 1.149,00</p>
           <p> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
