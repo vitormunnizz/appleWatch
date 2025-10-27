@@ -42,7 +42,7 @@ function App() {
           <p> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
           <p className='text-2xl my-5'>Cor - Azul-inverno</p>
-          <div id='imagens' className='flex gap-5'>
+          <div id='imagens' className='flex gap-5 mb-5'>
             <img src={cor0} alt="" width={35} className='cursor-pointer'/>
             <img src={cor1} alt="" width={35} className='cursor-pointer'/>
             <img src={cor2} alt="" width={35} className='cursor-pointer'/>
