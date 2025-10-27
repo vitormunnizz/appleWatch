@@ -9,6 +9,8 @@ import cor1 from "./assets/opcoes-cores/estelar.jpeg";
 import cor2 from "./assets/opcoes-cores/meia-noite.jpeg";
 import cor3 from "./assets/opcoes-cores/rosa-claro.jpeg";
 import cor4 from "./assets/opcoes-cores/verde-cipreste.jpeg";
+import carbonNeutral from "./assets/outros-recursos/neutralidade-c.jpeg";
+
 
 
 function App() {
@@ -49,8 +51,11 @@ function App() {
             <img src={cor3} alt="" width={35} className='cursor-pointer'/>
             <img src={cor4} alt="" width={35} className='cursor-pointer'/>
           </div>
-          <p>Cor da caixa do Apple Watch - Preto</p>
-          <h2>Tamanho da caixa</h2>
+          <div className='flex items-center'>
+            <img src={carbonNeutral} alt="" width={25}/>
+            <p>Carbon Neutral</p>
+          </div>
+          <h2 className='text-2xl mt-5'>Tamanho da caixa</h2>
           <div >
               <p>41 mm</p>
               <p>45 mm</p>
