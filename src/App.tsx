@@ -1,5 +1,5 @@
 import './App.css'
-import { FaApple } from "react-icons/fa";
+import { FaApple, FaTruck } from "react-icons/fa";
 import { PiMagnifyingGlassBold, PiBagBold } from "react-icons/pi";
 import img0 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-0.jpeg";
 import img1 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-1.jpeg";
@@ -65,9 +65,9 @@ function App() {
           <h2 className='text-2xl mt-4 mb-2 font-bold'>Tamanho da pulseira</h2>
           <p>Tamanho único (cabe na maioria dos pulsos)</p>
           <p className='text-gray-500'>Para pulsos de 145 a 220 mm.</p>
-          <div id='entrega' className='mt-2'>
+          <div id='entrega' className='mt-2 grid grid-cols-[auto_1fr] gap-x-3'>
             <div>
-
+              <FaTruck size={20} color="black" /> 
             </div>
             <div>
               <p className='font-bold'>Entrega:</p>
