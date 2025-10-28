@@ -86,14 +86,14 @@ function App() {
         </div>
         
 
-        <div id='imagens-relogios' className='flex flex-col'>
+        <div id='imagens-relogios' className='flex flex-col my-15'>
           <div>
-            <img src={img1} alt="aaa" width={200}/>
+            <img src={img1} alt="aaa" width={700}/>
           </div>
-          <div className='flex gap-10'>
-            <img src={img0} alt="aaa" width={100} className='cursor-pointer'/>
-            <img src={img1} alt="aaa" width={100} className='cursor-pointer'/>
-            <img src={img2} alt="aaa" width={100} className='cursor-pointer'/>
+          <div className='flex gap-10 justify-center'>
+            <img src={img0} alt="aaa" width={50} className='cursor-pointer'/>
+            <img src={img1} alt="aaa" width={50} className='cursor-pointer'/>
+            <img src={img2} alt="aaa" width={50} className='cursor-pointer'/>
           </div>
             
         </div>
