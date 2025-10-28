@@ -76,7 +76,7 @@ function App() {
               <p className='text-blue-500 hover:underline cursor-pointer'>Ver data de entrega</p>
             </div>
           </div>
-          <button className='px-10 py-2 bg-blue-500 text-white rounded-2xl m-4 font-bold cursor-pointer'>Colocar na sacola</button>
+          <button className='px-10 py-2 bg-blue-500 text-white rounded-2xl my-4 font-bold cursor-pointer hover:bg-blue-600 transition'>Colocar na sacola</button>
           <h2 className='my-2 font-bold'>Precisa de um tempo?</h2>
           <p>Mantenha todas as suas seleções salvando este aparelho em Itens salvos. Depois, você pode voltar quando quiser e continuar de onde parou.</p>
           <div className='flex items-center gap-1 text-blue-500 my-1 cursor-pointer hover:underline'>
