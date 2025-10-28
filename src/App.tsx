@@ -44,28 +44,42 @@ function App() {
           <p className='text-blue-500'> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
           <p className='text-2xl my-4 font-black'>Cor - Azul-inverno</p>
-          <div id='imagens' className='flex gap-5 mb-5'>
+          <div id='imagens' className='flex gap-5 mb-4'>
             <img src={cor0} alt="" width={35} className='cursor-pointer'/>
             <img src={cor1} alt="" width={35} className='cursor-pointer'/>
             <img src={cor2} alt="" width={35} className='cursor-pointer'/>
             <img src={cor3} alt="" width={35} className='cursor-pointer'/>
             <img src={cor4} alt="" width={35} className='cursor-pointer'/>
           </div>
-          <div className='flex items-center'>
+          <div id='carbonNeutral' className='flex items-center'>
             <img src={carbonNeutral} alt="" width={25}/>
             <p>Carbon Neutral</p>
           </div>
-          <h2 className='text-2xl mt-5 mb-3'>Tamanho da caixa</h2>
-          <div className='flex gap-5 text-1xl font-bold'>
+          <h2 className='text-2xl mt-4 mb-3 font-bold'>Tamanho da caixa</h2>
+          <div id='tamanhoCaixa' className='flex gap-5 text-1xl font-bold mb-2'>
               <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>41 mm</p>
               <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>45 mm</p>
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
-          <p>Saiba mais sobre a compatibilidade de pulseiras</p>
-          <h2>Tamanho da pulseira</h2>
+          <p className='text-blue-500'>Saiba mais sobre a compatibilidade de pulseiras</p>
+          <h2 className='text-2xl my-4 text-blod'>Tamanho da pulseira</h2>
           <p>Tamanho único (cabe na maioria dos pulsos)</p>
-          <p>Para pulsos de 145 a 220 mm.</p>
+          <p className='text-gray-500'>Para pulsos de 145 a 220 mm.</p>
+          <div id='entrega'>
+            <div>
+
+            </div>
+            <div>
+              <p className='text-blod'>Entrega</p>
+              <p>Em estoque</p>
+              <p>Frente Grátis</p>
+              <p className='text-blue-500'>Ver data de entrega</p>
+            </div>
+          </div>
+          <button>Colocar na sacola</button>
         </div>
+        
+
         <div id='imagens-relogios' className='flex flex-col'>
           <div>
             <img src={img1} alt="aaa" width={200}/>
