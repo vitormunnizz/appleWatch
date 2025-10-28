@@ -62,15 +62,15 @@ function App() {
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
           <p className='text-blue-500'>Saiba mais sobre a compatibilidade de pulseiras</p>
-          <h2 className='text-2xl my-4 text-blod'>Tamanho da pulseira</h2>
+          <h2 className='text-2xl mt-4 mb-2 font-bold'>Tamanho da pulseira</h2>
           <p>Tamanho único (cabe na maioria dos pulsos)</p>
           <p className='text-gray-500'>Para pulsos de 145 a 220 mm.</p>
-          <div id='entrega'>
+          <div id='entrega' className='mt-2'>
             <div>
 
             </div>
             <div>
-              <p className='text-blod'>Entrega</p>
+              <p className='font-bold'>Entrega:</p>
               <p>Em estoque</p>
               <p>Frente Grátis</p>
               <p className='text-blue-500'>Ver data de entrega</p>
