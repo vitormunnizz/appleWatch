@@ -39,11 +39,11 @@ function App() {
 
       <main className='grid grid-cols-2 mt-10'>
         <div id='textos' className='text-1xl'>
-          <h1 className='text-2xl my-5'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
-          <p>R$ 1.149,00</p>
-          <p> Em até 12x de R$ 95,75</p>
+          <h1 className='text-2xl my-4 font-bold'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
+          <p className='text-2xl'>R$ 1.149,00</p>
+          <p className='text-blue-500'> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
-          <p className='text-2xl my-5'>Cor - Azul-inverno</p>
+          <p className='text-2xl my-4 font-black'>Cor - Azul-inverno</p>
           <div id='imagens' className='flex gap-5 mb-5'>
             <img src={cor0} alt="" width={35} className='cursor-pointer'/>
             <img src={cor1} alt="" width={35} className='cursor-pointer'/>
@@ -55,10 +55,10 @@ function App() {
             <img src={carbonNeutral} alt="" width={25}/>
             <p>Carbon Neutral</p>
           </div>
-          <h2 className='text-2xl mt-5'>Tamanho da caixa</h2>
-          <div >
-              <p>41 mm</p>
-              <p>45 mm</p>
+          <h2 className='text-2xl mt-5 mb-3'>Tamanho da caixa</h2>
+          <div className='flex gap-5 text-1xl font-bold'>
+              <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>41 mm</p>
+              <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>45 mm</p>
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
           <p>Saiba mais sobre a compatibilidade de pulseiras</p>
