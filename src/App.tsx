@@ -1,6 +1,6 @@
 import './App.css'
 import { FaApple, FaTruck } from "react-icons/fa";
-import { PiMagnifyingGlassBold, PiBagBold } from "react-icons/pi";
+import { PiMagnifyingGlassBold, PiBagBold, PiBookmarkSimple} from "react-icons/pi";
 import img0 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-0.jpeg";
 import img1 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-1.jpeg";
 import img2 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-2.jpeg";
@@ -20,7 +20,7 @@ function App() {
       <header>
         <nav>
           <ul className='flex justify-between gap-10 items-center'>
-            <li className='cursor-pointer'><FaApple id='apple' /></li>
+            <li className='cursor-pointer'><FaApple/></li>
             <li className='cursor-pointer'>Loja</li>
             <li className='cursor-pointer'>Mac</li>
             <li className='cursor-pointer'>IPad</li>
@@ -41,42 +41,48 @@ function App() {
         <div id='textos' className='text-1xl'>
           <h1 className='text-2xl my-4 font-bold'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
           <p className='text-2xl'>R$ 1.149,00</p>
-          <p className='text-blue-500'> Em até 12x de R$ 95,75</p>
+          <p className='text-blue-500 hover:underline cursor-pointer'> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
-          <p className='text-2xl my-4 font-black'>Cor - Azul-inverno</p>
+          <h2 className='my-4 font-bold'>Cor - Azul-inverno</h2>
           <div id='imagens' className='flex gap-5 mb-4'>
-            <img src={cor0} alt="" width={35} className='cursor-pointer'/>
-            <img src={cor1} alt="" width={35} className='cursor-pointer'/>
-            <img src={cor2} alt="" width={35} className='cursor-pointer'/>
-            <img src={cor3} alt="" width={35} className='cursor-pointer'/>
-            <img src={cor4} alt="" width={35} className='cursor-pointer'/>
+            <img src={cor0} alt="" width={30} className='cursor-pointer'/>
+            <img src={cor1} alt="" width={30} className='cursor-pointer'/>
+            <img src={cor2} alt="" width={30} className='cursor-pointer'/>
+            <img src={cor3} alt="" width={30} className='cursor-pointer'/>
+            <img src={cor4} alt="" width={30} className='cursor-pointer'/>
           </div>
           <div id='carbonNeutral' className='flex items-center'>
             <img src={carbonNeutral} alt="" width={25}/>
             <p>Carbon Neutral</p>
           </div>
-          <h2 className='text-2xl mt-4 mb-3 font-bold'>Tamanho da caixa</h2>
+          <h2 className='mt-4 mb-3 font-bold'>Tamanho da caixa</h2>
           <div id='tamanhoCaixa' className='flex gap-5 text-1xl font-bold mb-2'>
-              <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>41 mm</p>
-              <p className='px-12 py-7 border-black border rounded-2xl cursor-pointer'>45 mm</p>
+              <p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>41 mm</p>
+              <p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>45 mm</p>
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
-          <p className='text-blue-500'>Saiba mais sobre a compatibilidade de pulseiras</p>
-          <h2 className='text-2xl mt-4 mb-2 font-bold'>Tamanho da pulseira</h2>
+          <p className='text-blue-500 hover:underline cursor-pointer'>Saiba mais sobre a compatibilidade de pulseiras</p>
+          <h2 className='mt-4 mb-2 font-bold'>Tamanho da pulseira</h2>
           <p>Tamanho único (cabe na maioria dos pulsos)</p>
           <p className='text-gray-500'>Para pulsos de 145 a 220 mm.</p>
           <div id='entrega' className='mt-2 grid grid-cols-[auto_1fr] gap-x-3'>
             <div>
-              <FaTruck size={20} color="black" /> 
+              <FaTruck className='w-5 h-8 text-gray-700 hover:text-black transition' /> 
             </div>
             <div>
               <p className='font-bold'>Entrega:</p>
               <p>Em estoque</p>
               <p>Frente Grátis</p>
-              <p className='text-blue-500'>Ver data de entrega</p>
+              <p className='text-blue-500 hover:underline cursor-pointer'>Ver data de entrega</p>
             </div>
           </div>
-          <button>Colocar na sacola</button>
+          <button className='px-10 py-2 bg-blue-500 text-white rounded-2xl m-4 font-bold cursor-pointer'>Colocar na sacola</button>
+          <h2 className='my-2 font-bold'>Precisa de um tempo?</h2>
+          <p>Mantenha todas as suas seleções salvando este aparelho em Itens salvos. Depois, você pode voltar quando quiser e continuar de onde parou.</p>
+          <div className='flex items-center gap-1 text-blue-500 my-1 cursor-pointer hover:underline'>
+            <PiBookmarkSimple className="w-4 h-7"/>
+            <p>Salvar para depois</p>
+          </div>
         </div>
         
 
