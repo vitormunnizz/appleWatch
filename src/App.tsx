@@ -18,7 +18,7 @@ function App() {
   const [selecionada, setSelecionada] = useState(0);
 
   function selecionarImagem(i) {
-    setSelecionada(i);
+    setSelecionada(i)
   }
 
   return (
@@ -51,11 +51,36 @@ function App() {
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
           <h2 className='my-4 font-bold'>Cor - Azul-inverno</h2>
           <div id='imagens' className='flex gap-5 mb-4'>
-            <button className='cursor-pointer w-9 h-9 selecionar' onClick={() => selecionarImagem(0)}><img src={cor0} alt=""/></button>
-            <button className={`cursor-pointer w-9 h-9 ${obterClasseCor(0)}`} onClick={() => selecionarImagem(1)}><img src={cor1} alt=""/></button>
-            <button className='cursor-pointer w-9 h-9 ' onClick={() => selecionarImagem(2)}><img src={cor2} alt=""/></button>
-            <button className='cursor-pointer w-9 h-9 ' onClick={() => selecionarImagem(3)}><img src={cor3} alt=""/></button>
-            <button className='cursor-pointer w-9 h-9 ' onClick={() => selecionarImagem(4)}><img src={cor4} alt=""/></button>
+
+            <button
+              onClick={() => selecionarImagem(0)}
+              className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionar' : ''}`}
+            >
+              <img src={cor0} alt="cor da pulseira" />
+            </button>
+
+            <button
+              onClick={() => selecionarImagem(1)}
+              className={`cursor-pointer w-9 h-9 ${selecionada === 1 ? 'selecionar' : ''}`}
+            >
+              <img src={cor1} alt="cor da pulseira" />
+            </button>
+
+            <button
+              onClick={() => selecionarImagem(2)}
+              className={`cursor-pointer w-9 h-9 ${selecionada === 2 ? 'selecionar' : ''}`}
+            >
+              <img src={cor2} alt="cor da pulseira" />
+            </button>
+
+            <button
+              onClick={() => selecionarImagem(3)}
+              className={`cursor-pointer w-9 h-9 ${selecionada === 3 ? 'selecionar' : ''}`}
+            >
+              <img src={cor3} alt="cor da pulseira" />
+            </button>
+
+            <button onClick={() => selecionarImagem(4)} className={`cursor-pointer w-9 h-9 ${selecionada === 4 ? 'selecionar' : ''}`}> <img src={cor4} alt="cor da pulseira" /> </button>
           </div>
           <div id='carbonNeutral' className='flex items-center'>
             <img src={carbonNeutral} alt="" width={25} />
