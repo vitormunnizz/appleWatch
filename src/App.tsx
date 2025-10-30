@@ -3,14 +3,21 @@ import { useState } from "react";
 
 import { FaApple, FaTruck } from "react-icons/fa";
 import { PiMagnifyingGlassBold, PiBagBold, PiBookmarkSimple } from "react-icons/pi";
+
 import img0 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-0.jpeg";
 import img1 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-1.jpeg";
 import img2 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-2.jpeg";
+
+import img3 from "./assets/opcoes-cores/imagens-estelar/imagem-0.jpeg";
+import img4 from "./assets/opcoes-cores/imagens-estelar/imagem-1.jpeg";
+import img5 from "./assets/opcoes-cores/imagens-estelar/imagem-2.jpeg";
+
 import cor0 from "./assets/opcoes-cores/azul-inverno.jpeg";
 import cor1 from "./assets/opcoes-cores/estelar.jpeg";
 import cor2 from "./assets/opcoes-cores/meia-noite.jpeg";
 import cor3 from "./assets/opcoes-cores/rosa-claro.jpeg";
 import cor4 from "./assets/opcoes-cores/verde-cipreste.jpeg";
+
 import carbonNeutral from "./assets/outros-recursos/neutralidade-c.jpeg";
 
 function App() {
@@ -20,6 +27,16 @@ function App() {
   function selecionarImagem(i) {
     setSelecionada(i)
   }
+
+  function imagemCor(){
+    if (selecionada === 0){
+      return [img0, img1, img2]
+    } else if(selecionada === 1){
+      return [img3, img4, img5]
+    }
+  }
+
+  const imagensAtuais = imagemCor();
 
   return (
     <div>
@@ -119,12 +136,12 @@ function App() {
 
         <div id='imagens-relogios' className='flex flex-col my-15'>
           <div>
-            <img src={img1} alt="aaa" width={700} />
+            <img src={imagensAtuais[1]} alt="aaa" width={700} />
           </div>
           <div className='flex gap-10 justify-center'>
-            <img src={img0} alt="aaa" width={50} className='cursor-pointer' />
-            <img src={img1} alt="aaa" width={50} className='cursor-pointer' />
-            <img src={img2} alt="aaa" width={50} className='cursor-pointer' />
+            <img src={imagensAtuais[0]}  alt="aaa" width={50} className='cursor-pointer' />
+            <img src={imagensAtuais[1]} alt="aaa" width={50} className='cursor-pointer' />
+            <img src={imagensAtuais[2]} alt="aaa" width={50} className='cursor-pointer' />
           </div>
 
         </div>
