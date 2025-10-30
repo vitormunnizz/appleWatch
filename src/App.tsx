@@ -7,17 +7,23 @@ import { PiMagnifyingGlassBold, PiBagBold, PiBookmarkSimple } from "react-icons/
 import img0 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-0.jpeg";
 import img1 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-1.jpeg";
 import img2 from "./assets/opcoes-cores/imagens-azul-inverno/imagem-2.jpeg";
-
 import img3 from "./assets/opcoes-cores/imagens-estelar/imagem-0.jpeg";
 import img4 from "./assets/opcoes-cores/imagens-estelar/imagem-1.jpeg";
 import img5 from "./assets/opcoes-cores/imagens-estelar/imagem-2.jpeg";
-
+import img6 from "./assets/opcoes-cores/imagens-meia-noite/imagem-0.jpeg";
+import img7 from "./assets/opcoes-cores/imagens-meia-noite/imagem-1.jpeg";
+import img8 from "./assets/opcoes-cores/imagens-meia-noite/imagem-2.jpeg";
+import img9 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
+import img10 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
+import img11 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
+import img12 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
+import img13 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
+import img14 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
 import cor0 from "./assets/opcoes-cores/azul-inverno.jpeg";
 import cor1 from "./assets/opcoes-cores/estelar.jpeg";
 import cor2 from "./assets/opcoes-cores/meia-noite.jpeg";
 import cor3 from "./assets/opcoes-cores/rosa-claro.jpeg";
 import cor4 from "./assets/opcoes-cores/verde-cipreste.jpeg";
-
 import carbonNeutral from "./assets/outros-recursos/neutralidade-c.jpeg";
 
 function App() {
@@ -28,15 +34,23 @@ function App() {
     setSelecionada(i)
   }
 
-  function imagemCor(){
+  function mudarImagem(){
     if (selecionada === 0){
-      return [img0, img1, img2]
-    } else if(selecionada === 1){
+      return [img0, img1,img2]
+    } else if (selecionada === 1){
       return [img3, img4, img5]
+    } else if (selecionada === 2){
+      return [img6, img7, img8]
+    } else if (selecionada === 3){
+      return [img9, img10, img11]
+    } else if (selecionada === 4){
+      return [img12, img13, img14]
+    } else{
+      return []
     }
   }
 
-  const imagensAtuais = imagemCor();
+  const imagensAtuais = mudarImagem();
 
   return (
     <div>
