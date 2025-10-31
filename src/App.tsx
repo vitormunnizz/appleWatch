@@ -36,7 +36,15 @@ function App() {
   }
 
   function selecionarTamanho(i) {
-    setSelecionadaTamanho
+    setSelecionadaTamanho(i)
+  }
+
+  function mudarTamanhoImg(){
+    if (selecinaTamanho === 0) {
+      return 120
+    } else if(selecinaTamanho === 1){
+      return 130
+    }
   }
 
   function mudarImagem() {
@@ -54,6 +62,8 @@ function App() {
       return []
     }
   }
+
+  
 
   const imagensAtuais = mudarImagem();
 
@@ -109,8 +119,8 @@ function App() {
           </div>
           <h2 className='mt-4 mb-3 font-bold'>Tamanho da caixa</h2>
           <div id='tamanhoCaixa' className='flex gap-5 text-1xl font-bold mb-2'>
-            <button onClick={() => selecionarTamanho(0)}><p className='px-10 py-6 border-black border rounded-2xl cursor-pointer selecionarTamanho'>41 mm</p></button>
-            <button onClick={() => selecionarTamanho(0)}><p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>45 mm</p></button>
+            <button onClick={() => selecionarTamanho(0)}><p className={`px-10 py-6 border-black border rounded-2xl cursor-pointer ${selecinaTamanho === 0 ? 'selecionarTamanho' : ''}`}>41 mm</p></button>
+            <button onClick={() => selecionarTamanho(1)}><p className={`px-10 py-6 border-black border rounded-2xl cursor-pointer ${selecinaTamanho === 1 ? 'selecionarTamanho' : ''}`}>45 mm</p></button>
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
           <p className='text-blue-500 hover:underline cursor-pointer'>Saiba mais sobre a compatibilidade de pulseiras</p>
@@ -140,7 +150,7 @@ function App() {
 
         <div id='imagens-relogios' className='flex flex-col my-15'>
           <div>
-            <img src={imagensAtuais[1]} alt="aaa" width={700} />
+            <img src={imagensAtuais[1]} alt="aaa" className={`w-${mudarTamanhoImg()}`}/>
           </div>
           <div className='flex gap-10 justify-center'>
             <img src={imagensAtuais[0]} alt="aaa" width={50} className='cursor-pointer' />
