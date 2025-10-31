@@ -30,8 +30,9 @@ function App() {
 
   const [selecionada, setSelecionada] = useState(0);
   const [selecinaTamanho, setSelecionadaTamanho] = useState(0)
+  const [selecionaImagem, setselecionaImagem] = useState(1)
 
-  function selecionarImagem(i) {
+  function selecionarCor(i) {
     setSelecionada(i)
   }
 
@@ -39,15 +40,19 @@ function App() {
     setSelecionadaTamanho(i)
   }
 
-  function mudarnome(){
+  function selecionarImagem(i) {
+    setselecionaImagem(i)
+  }
+
+  function mudarnome() {
     if (selecionada === 0) {
-      return  "azul-inverno"
+      return "azul-inverno"
     } else if (selecionada === 1) {
-      return   "estela"
+      return "estela"
     } else if (selecionada === 2) {
-      return   "meia-noite"
+      return "meia-noite"
     } else if (selecionada === 3) {
-      return   "rosa-claro"
+      return "rosa-claro"
     } else if (selecionada === 4) {
       return "verde-cinpreste"
     } else {
@@ -55,19 +60,19 @@ function App() {
     }
   }
 
-    function mudarTamanho(){
+  function mudarTamanho() {
     if (selecinaTamanho === 0) {
       return "41 mm"
-    } else if(selecinaTamanho === 1){
+    } else if (selecinaTamanho === 1) {
       return "45 mm"
     }
   }
 
-  function mudarTamanhoImg(){
+  function mudarTamanhoImg() {
     if (selecinaTamanho === 0) {
-      return 120
-    } else if(selecinaTamanho === 1){
-      return 130
+      return "w-120"
+    } else if (selecinaTamanho === 1) {
+      return "w-130"
     }
   }
 
@@ -87,7 +92,7 @@ function App() {
     }
   }
 
-  
+
 
   const imagensAtuais = mudarImagem();
 
@@ -121,20 +126,20 @@ function App() {
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
           <h2 className='my-4 font-bold'>Cor - {mudarnome()}</h2>
           <div id='imagens' className='flex gap-5 mb-4'>
-            <button onClick={() => selecionarImagem(0)}>
-              <img src={cor0} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionarCor' : ''}`}/>
+            <button onClick={() => selecionarCor(0)}>
+              <img src={cor0} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionarCor' : ''}`} />
             </button>
-            <button onClick={() => selecionarImagem(1)}>
-              <img src={cor1} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 1 ? 'selecionarCor' : ''}`}/>
+            <button onClick={() => selecionarCor(1)}>
+              <img src={cor1} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 1 ? 'selecionarCor' : ''}`} />
             </button>
-            <button onClick={() => selecionarImagem(2)}>
-              <img src={cor2} alt="cor da pulseira"  className={`cursor-pointer w-9 h-9 ${selecionada === 2 ? 'selecionarCor' : ''}`}/>
+            <button onClick={() => selecionarCor(2)}>
+              <img src={cor2} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 2 ? 'selecionarCor' : ''}`} />
             </button>
-            <button onClick={() => selecionarImagem(3)}>
-              <img src={cor3} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 3 ? 'selecionarCor' : ''}`}/>
+            <button onClick={() => selecionarCor(3)}>
+              <img src={cor3} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 3 ? 'selecionarCor' : ''}`} />
             </button>
-            <button onClick={() => selecionarImagem(4)}>
-              <img src={cor4} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 4 ? 'selecionarCor' : ''}`}/>
+            <button onClick={() => selecionarCor(4)}>
+              <img src={cor4} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 4 ? 'selecionarCor' : ''}`} />
             </button>
           </div>
           <div id='carbonNeutral' className='flex items-center'>
@@ -172,14 +177,20 @@ function App() {
         </div>
 
 
-        <div id='imagens-relogios' className='flex flex-col my-15'>
+        <div id='imagens-relogio' className='flex flex-col my-15'>
           <div>
-            <img src={imagensAtuais[1]} alt="aaa" className={`w-${mudarTamanhoImg()}`}/>
+            <img src={imagensAtuais[1]} alt="Imagens do relogio" className={mudarTamanhoImg()} />
           </div>
           <div className='flex gap-10 justify-center'>
-            <img src={imagensAtuais[0]} alt="aaa" width={50} className='cursor-pointer' />
-            <img src={imagensAtuais[1]} alt="aaa" width={50} className='cursor-pointer' />
-            <img src={imagensAtuais[2]} alt="aaa" width={50} className='cursor-pointer' />
+            <button onClick={(() => {selecionarImagem(0)})}>
+              <img src={imagensAtuais[0]} alt="Imagens do relogio" width={50} className={`cursor-pointer ${selecionaImagem === 0 ? 'border-b-2 border-black' : ''}`} />
+            </button>
+            <button onClick={(() => {selecionarImagem(1)})}>
+              <img src={imagensAtuais[1]} alt="Imagens do relogio" width={50} className={`cursor-pointer ${selecionaImagem === 1 ? 'border-b-2 border-black' : ''}`} />
+            </button>
+            <button onClick={(() => {selecionarImagem(2)})}>
+              <img src={imagensAtuais[2]} alt="Imagens do relogio" width={50} className={`cursor-pointer ${selecionaImagem === 2 ? 'border-b-2 border-black' : ''}`} />
+            </button>
           </div>
 
         </div>
