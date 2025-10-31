@@ -13,11 +13,11 @@ import img5 from "./assets/opcoes-cores/imagens-estelar/imagem-2.jpeg";
 import img6 from "./assets/opcoes-cores/imagens-meia-noite/imagem-0.jpeg";
 import img7 from "./assets/opcoes-cores/imagens-meia-noite/imagem-1.jpeg";
 import img8 from "./assets/opcoes-cores/imagens-meia-noite/imagem-2.jpeg";
-import img9 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
-import img10 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
+import img9 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-0.jpeg";
+import img10 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-1.jpeg";
 import img11 from "./assets/opcoes-cores/imagens-rosa-claro/imagem-2.jpeg";
-import img12 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
-import img13 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
+import img12 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-0.jpeg";
+import img13 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-1.jpeg";
 import img14 from "./assets/opcoes-cores/imagens-verde-cipreste/imagem-2.jpeg";
 import cor0 from "./assets/opcoes-cores/azul-inverno.jpeg";
 import cor1 from "./assets/opcoes-cores/estelar.jpeg";
@@ -29,23 +29,28 @@ import carbonNeutral from "./assets/outros-recursos/neutralidade-c.jpeg";
 function App() {
 
   const [selecionada, setSelecionada] = useState(0);
+  const [selecinaTamanho, setSelecionadaTamanho] = useState(0)
 
   function selecionarImagem(i) {
     setSelecionada(i)
   }
 
-  function mudarImagem(){
-    if (selecionada === 0){
-      return [img0, img1,img2]
-    } else if (selecionada === 1){
+  function selecionarTamanho(i) {
+    setSelecionadaTamanho
+  }
+
+  function mudarImagem() {
+    if (selecionada === 0) {
+      return [img0, img1, img2]
+    } else if (selecionada === 1) {
       return [img3, img4, img5]
-    } else if (selecionada === 2){
+    } else if (selecionada === 2) {
       return [img6, img7, img8]
-    } else if (selecionada === 3){
+    } else if (selecionada === 3) {
       return [img9, img10, img11]
-    } else if (selecionada === 4){
+    } else if (selecionada === 4) {
       return [img12, img13, img14]
-    } else{
+    } else {
       return []
     }
   }
@@ -53,10 +58,10 @@ function App() {
   const imagensAtuais = mudarImagem();
 
   return (
-    <div>
+    <div className="flex flex-col items-center mx-100 my-2">
       <header>
         <nav>
-          <ul className='flex justify-between gap-10 items-center'>
+          <ul className='flex gap-10 items-center'>
             <li className='cursor-pointer'><FaApple /></li>
             <li className='cursor-pointer'>Loja</li>
             <li className='cursor-pointer'>Mac</li>
@@ -74,7 +79,7 @@ function App() {
         </nav>
       </header>
 
-      <main className='grid grid-cols-2 mt-10'>
+      <main className='grid grid-cols-2 mt-5'>
         <div id='textos' className='text-1xl'>
           <h1 className='text-2xl my-4 font-bold'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
           <p className='text-2xl'>R$ 1.149,00</p>
@@ -82,36 +87,21 @@ function App() {
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
           <h2 className='my-4 font-bold'>Cor - Azul-inverno</h2>
           <div id='imagens' className='flex gap-5 mb-4'>
-
-            <button
-              onClick={() => selecionarImagem(0)}
-              className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionar' : ''}`}
-            >
-              <img src={cor0} alt="cor da pulseira" />
+            <button onClick={() => selecionarImagem(0)}>
+              <img src={cor0} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionarCor' : ''}`}/>
             </button>
-
-            <button
-              onClick={() => selecionarImagem(1)}
-              className={`cursor-pointer w-9 h-9 ${selecionada === 1 ? 'selecionar' : ''}`}
-            >
-              <img src={cor1} alt="cor da pulseira" />
+            <button onClick={() => selecionarImagem(1)}>
+              <img src={cor1} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 1 ? 'selecionarCor' : ''}`}/>
             </button>
-
-            <button
-              onClick={() => selecionarImagem(2)}
-              className={`cursor-pointer w-9 h-9 ${selecionada === 2 ? 'selecionar' : ''}`}
-            >
-              <img src={cor2} alt="cor da pulseira" />
+            <button onClick={() => selecionarImagem(2)}>
+              <img src={cor2} alt="cor da pulseira"  className={`cursor-pointer w-9 h-9 ${selecionada === 2 ? 'selecionarCor' : ''}`}/>
             </button>
-
-            <button
-              onClick={() => selecionarImagem(3)}
-              className={`cursor-pointer w-9 h-9 ${selecionada === 3 ? 'selecionar' : ''}`}
-            >
-              <img src={cor3} alt="cor da pulseira" />
+            <button onClick={() => selecionarImagem(3)}>
+              <img src={cor3} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 3 ? 'selecionarCor' : ''}`}/>
             </button>
-
-            <button onClick={() => selecionarImagem(4)} className={`cursor-pointer w-9 h-9 ${selecionada === 4 ? 'selecionar' : ''}`}> <img src={cor4} alt="cor da pulseira" /> </button>
+            <button onClick={() => selecionarImagem(4)}>
+              <img src={cor4} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 4 ? 'selecionarCor' : ''}`}/>
+            </button>
           </div>
           <div id='carbonNeutral' className='flex items-center'>
             <img src={carbonNeutral} alt="" width={25} />
@@ -119,8 +109,8 @@ function App() {
           </div>
           <h2 className='mt-4 mb-3 font-bold'>Tamanho da caixa</h2>
           <div id='tamanhoCaixa' className='flex gap-5 text-1xl font-bold mb-2'>
-            <p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>41 mm</p>
-            <p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>45 mm</p>
+            <button onClick={() => selecionarTamanho(0)}><p className='px-10 py-6 border-black border rounded-2xl cursor-pointer selecionarTamanho'>41 mm</p></button>
+            <button onClick={() => selecionarTamanho(0)}><p className='px-10 py-6 border-black border rounded-2xl cursor-pointer'>45 mm</p></button>
           </div>
           <p>Compatível com a maioria das versões de Apple Watch.</p>
           <p className='text-blue-500 hover:underline cursor-pointer'>Saiba mais sobre a compatibilidade de pulseiras</p>
@@ -153,7 +143,7 @@ function App() {
             <img src={imagensAtuais[1]} alt="aaa" width={700} />
           </div>
           <div className='flex gap-10 justify-center'>
-            <img src={imagensAtuais[0]}  alt="aaa" width={50} className='cursor-pointer' />
+            <img src={imagensAtuais[0]} alt="aaa" width={50} className='cursor-pointer' />
             <img src={imagensAtuais[1]} alt="aaa" width={50} className='cursor-pointer' />
             <img src={imagensAtuais[2]} alt="aaa" width={50} className='cursor-pointer' />
           </div>

@@ -6,13 +6,15 @@
 
 body {
   font-family: "San Francisco";
-  max-width: 1000px;
-  margin: 0 auto;
   font-size: 14px;
 }
 
-.selecionar{
+.selecionarCor{
   border: .1rem solid blue;
   border-radius: 50%;
   padding: 0.1rem;
+}
+
+.selecionarTamanho{
+  border: .125rem solid blue;
 }
