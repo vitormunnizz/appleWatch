@@ -179,7 +179,7 @@ function App() {
 
         <div id='imagens-relogio' className='flex flex-col my-15'>
           <div>
-            <img src={imagensAtuais[1]} alt="Imagens do relogio" className={mudarTamanhoImg()} />
+            <img src={imagensAtuais[selecionaImagem]} alt="Imagens do relogio" className={mudarTamanhoImg()} />
           </div>
           <div className='flex gap-10 justify-center'>
             <button onClick={(() => {selecionarImagem(0)})}>
