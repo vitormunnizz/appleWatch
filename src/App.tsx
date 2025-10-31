@@ -39,6 +39,30 @@ function App() {
     setSelecionadaTamanho(i)
   }
 
+  function mudarnome(){
+    if (selecionada === 0) {
+      return  "azul-inverno"
+    } else if (selecionada === 1) {
+      return   "estela"
+    } else if (selecionada === 2) {
+      return   "meia-noite"
+    } else if (selecionada === 3) {
+      return   "rosa-claro"
+    } else if (selecionada === 4) {
+      return "verde-cinpreste"
+    } else {
+      return []
+    }
+  }
+
+    function mudarTamanho(){
+    if (selecinaTamanho === 0) {
+      return "41 mm"
+    } else if(selecinaTamanho === 1){
+      return "45 mm"
+    }
+  }
+
   function mudarTamanhoImg(){
     if (selecinaTamanho === 0) {
       return 120
@@ -91,11 +115,11 @@ function App() {
 
       <main className='grid grid-cols-2 mt-5'>
         <div id='textos' className='text-1xl'>
-          <h1 className='text-2xl my-4 font-bold'>Pulseira Loop Esportiva azul-inverno para caixa de 45 mm</h1>
+          <h1 className='text-2xl my-4 font-bold'>Pulseira loop esportiva {mudarnome()} para caixa de {mudarTamanho()}</h1>
           <p className='text-2xl'>R$ 1.149,00</p>
           <p className='text-blue-500 hover:underline cursor-pointer'> Em até 12x de R$ 95,75</p>
           <p>R$ 1.034,10 à vista (10% de desconto)</p>
-          <h2 className='my-4 font-bold'>Cor - Azul-inverno</h2>
+          <h2 className='my-4 font-bold'>Cor - {mudarnome()}</h2>
           <div id='imagens' className='flex gap-5 mb-4'>
             <button onClick={() => selecionarImagem(0)}>
               <img src={cor0} alt="cor da pulseira" className={`cursor-pointer w-9 h-9 ${selecionada === 0 ? 'selecionarCor' : ''}`}/>
