@@ -97,7 +97,7 @@ function App() {
   const imagensAtuais = mudarImagem();
 
   return (
-    <div className="flex flex-col items-center mx-100 my-2">
+    <div className="flex flex-col items-center sm:mx-8 lg:mx-100 my-2">
       <header>
         <nav>
           <ul className='flex gap-10 items-center'>
