@@ -1,45 +1,71 @@
-## Descrição
+# ⌚ Apple Watch – React + TypeScript + Vite
 
-Este projeto tem como objetivo desenvolver uma **interface interativa de apresentação de produto**, inspirada no Apple Watch, permitindo que os usuários visualizem diferentes **opções de cores e imagens do produto** de forma dinâmica.
+Projeto de **interface interativa de apresentação de produto** inspirado no **Apple Watch**, desenvolvido com **React**, **TypeScript** e **Vite**. A aplicação permite visualizar diferentes **variações de cores do produto**, atualizando dinamicamente as imagens exibidas na tela, simulando a experiência de uma página moderna de produto utilizada em **e-commerces e landing pages tecnológicas**.
 
-A aplicação foi construída com foco em **experiência do usuário (UX)** e organização de componentes, utilizando tecnologias modernas de desenvolvimento front-end. O sistema permite alternar entre diferentes variações do produto, exibindo imagens correspondentes a cada opção selecionada.
+O objetivo do projeto é praticar **componentização**, **gerenciamento de estado** e **organização de assets** em aplicações front-end modernas.
 
 <img width="1035" height="900" alt="Captura de tela de 2025-11-23 15-52-40" src="https://github.com/user-attachments/assets/de5b9964-c7b6-4c29-a9cf-2747ab791bcd" />
 
-## Estrutura do Projeto
-
-A aplicação inclui diferentes recursos para navegação e visualização do produto:
-
-- **Seleção de Cores do Produto**: Permite alternar entre diferentes cores disponíveis do relógio.
-- **Galeria de Imagens Dinâmica**: Atualização das imagens conforme a cor selecionada.
-- **Interface Interativa**: Layout moderno inspirado em páginas de apresentação de produtos.
-- **Organização de Assets**: Estrutura organizada para imagens e recursos visuais.
-- **Componentização da Interface**: Estrutura baseada em componentes reutilizáveis.
-
-Esses elementos tornam a aplicação mais interativa e aproximam a experiência de um e-commerce moderno.
-
-## Modelagem dos Dados
-
-- **Organização de Recursos Visuais**: As imagens foram estruturadas por categorias e cores do produto.
-- **Gerenciamento de Estado**: Controle da cor selecionada e atualização dinâmica da interface.
-- **Estrutura de Componentes**: Separação de responsabilidades entre componentes da aplicação.
-
 ## Tecnologias Utilizadas
 
-- **React**: Biblioteca para construção da interface de usuário.
-- **TypeScript**: Tipagem estática para maior segurança no desenvolvimento.
-- **Vite**: Ferramenta de build rápida para aplicações modernas.
-- **CSS**: Estilização da interface e layout da aplicação.
-- **JavaScript/TypeScript**: Lógica da aplicação.
+- **React** – Construção da interface baseada em componentes  
+- **TypeScript** – Tipagem estática para maior segurança e escalabilidade  
+- **Vite** – Ferramenta moderna de build e desenvolvimento rápido  
+- **CSS** – Estilização da interface  
+- **JavaScript / DOM Virtual** – Atualização dinâmica da interface  
 
-## Resultados Esperados
+## Estrutura do Projeto
 
-Este projeto demonstra:
+```
 
-- **Criação de Interfaces Modernas**: Desenvolvimento de páginas interativas para apresentação de produtos.
-- **Organização de Projetos Front-end**: Estrutura escalável para aplicações React.
-- **Experiência do Usuário Aprimorada**: Navegação intuitiva entre opções de produto.
-- **Base para Projetos de E-commerce**: Estrutura que pode ser expandida para lojas virtuais completas.
+appleWatch/
+├── public/              # Arquivos públicos
+├── src/
+│   ├── assets/          # Imagens do produto
+│   ├── components/      # Componentes da interface
+│   ├── App.tsx          # Componente principal
+│   ├── main.tsx         # Inicialização da aplicação
+│   └── styles/          # Estilos da aplicação
+├── index.html           # Estrutura base
+├── package.json         # Dependências do projeto
+└── README.md            # Documentação
+
+````
+
+## Como Executar o Projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/appleWatch.git
+
+# Acesse o diretório
+cd appleWatch
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
+````
+
+Após isso, abra o navegador no endereço exibido no terminal (normalmente `http://localhost:5173`).
+
+## Funcionalidades
+
+* Seleção de **cores do Apple Watch**
+* Atualização dinâmica das **imagens do produto**
+* Interface moderna inspirada em páginas oficiais de tecnologia
+* Estrutura baseada em **componentes reutilizáveis**
+* Organização profissional de assets
+* Aplicação rápida utilizando **Vite**
+
+## Possíveis Melhorias
+
+* Adicionar animações de transição entre cores do produto
+* Implementar versão **responsiva completa para mobile**
+* Criar página de **detalhes do produto**
+* Adicionar carrinho de compras simulado
+* Implementar integração com API de produtos
 
 ## Autor
 
@@ -47,5 +73,5 @@ Este projeto demonstra:
 
 Engenheiro da Computação | Desenvolvedor Front-end
 
-- vitormunnizz@gmail.com
-- https://www.linkedin.com/in/vitormunnizz
+* [vitormunnizz@gmail.com](mailto:vitormunnizz@gmail.com)
+* [www.linkedin.com/in/vitormunnizz](https://www.linkedin.com/in/vitormunnizz)
